@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>La Reine Brasil</title>
+  </head>
+  <body>
+    <div class="box">
+      <img
+        class="logo"
+        src="./assets/LogoLaReine.png"
+        alt="Logo da La Reine Brasil"
+      />
+      <h1>
+        SUA MAJESTADE <br />
+        TEM CURVAS
+      </h1>
+      <a rel="noopener"
+        href="https://maps.app.goo.gl/e3vpyFc3WsfgUmj9A"
+        class="loc"
+        target="_blank"
+        ><i data-lucide="map-pin"></i>Moda Center - Santa Cruz do Capibaribe
+        <br />
+        Setor Verde, Rua B. Box 124</a
+      >
+      <div class="links">
+        <a rel="noopener" class="BoxLink" href="https://chat.whatsapp.com/LkEhGRfpfkPEAXXq7Dsr4k?mode=ac_t" target="_blank">
+          <div class="BoxIcon"><i data-lucide="users"></i></div>
+          <div class="textLink">
+            <h2>Grupo Whatsapp</h2>
+            <p class="pBoxLink">
+              Entre no nosso grupo para ter acesso adiantado á novidades
+            </p>
+          </div>
+        </a>
+        <a rel="noopener"  class="BoxLink" id="zap" href="" target="_blank">
+          <div class="BoxIcon"><i data-lucide="message-circle"></i></div>
+          <div class="textLink">
+            <h2>Falar com a Dona</h2>
+            <p class="pBoxLink">
+              Atendimento personalizado diretamente com a proprietária
+            </p>
+          </div>
+        </a>
+        <a rel="noopener"  class="BoxLink" href="/assets/catalogoLaReine.pdf" target="_blank">
+          <div class="BoxIcon"><i data-lucide="book-image"></i></div>
+          <div class="textLink">
+            <h2>Catálogo de Produtos</h2>
+            <p class="pBoxLink">Navegue por nossa coleção completa</p>
+          </div>
+        </a>
+      </div>
+      <p class="direitos" id="direitos"></p>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      const pDireito = document.getElementById("direitos");
+      const data = new Date();
+      const year = data.getFullYear();
+
+      pDireito.innerHTML = `© ${year} La Reine Brasil - Todos os <br> direitos reservados`;
+
+      const msg =
+        "Olá! Vim pelo site da La Reine Brasil e gostaria de falar diretamente com a Dona para conhecer melhor as novidades e coleções.";
+      const href = `https://wa.me/558196021948?text=${encodeURIComponent(msg)}`;
+      document.getElementById("zap").setAttribute("href", href);
+      document.getElementById("zap").setAttribute("rel", "noopener");
+    </script>
+  </body>
+</html>

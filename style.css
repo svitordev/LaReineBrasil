@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap");
+
+:root {
+  --phone-w: 428px;
+  --phone-h: 926px;
+  --bg-base: #522724;
+  --bg-box: #612826;
+  --text-light: #ffffff;
+  --shadow: 5px 5px 15px 5px #3f1e1c;
+}
+
+/* Base */
+html,
+body {
+  background-color: var(--bg-base);
+  margin: 0;
+  padding: 0;
+  min-height: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+/* Links reset */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal (moldura) */
+.box {
+  background-image: url(./assets/backgroundBox.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--bg-box);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* Tipografia */
+h1,
+.loc,
+.direitos {
+  color: var(--text-light);
+}
+.loc:hover {
+  color: goldenrod;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.15;
+}
+
+h2 {
+  color: #222222;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Meta/informações */
+.loc,
+.direitos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  margin: 1.5rem 0;
+}
+
+/* Lista de links */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.BoxLink {
+  background-color: #ffffffce;
+  width: 90%;
+  padding: 0.8rem 0;
+  border-radius: 25px;
+  margin: auto;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.6);
+}
+
+.pBoxLink {
+  width: 80%;
+  font-weight: 500;
+  color: var(--bg-base);
+  margin: 0;
+}
+
+.BoxIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--bg-base);
+  border-radius: 100px;
+  color: var(--text-light);
+}
+
+.textLink {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.textLink > h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+  padding: 1rem 0;
+  width: 25%;
+}
+
+/* Hover consistente */
+.BoxLink:hover {
+  background-color: var(--bg-base);
+  color: var(--text-light);
+}
+.BoxLink:hover h2,
+.BoxLink:hover p,
+.BoxLink:hover .pBoxLink,
+.BoxLink:hover i {
+  color: var(--text-light);
+}
+
+/* ========= Tablet e Desktop =========
+   - Largura fixa 428px
+   - Altura = 80% da viewport (máx. 926px)
+   - Sem scroll interno (conteúdo reduzido para caber)
+*/
+@media (min-width: 700px) {
+  .box {
+    width: 450px;
+    border-radius: 25px;
+  }
+  html, body{
+    min-height: 100svh;
+  }
+}
+@media (min-width: 1000px) {
+  .box {
+    width: 350px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding: 0.75rem 0;
+  }
+
+  /* Reduções para caber tudo confortavelmente */
+  .logo {
+    width: 20%;
+    padding: 0.5rem 0 0.75rem;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-top: 0.25rem;
+  }
+
+  .loc {
+    margin: 0.75rem 0 1rem;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .links {
+    gap: 0.75rem;
+  }
+
+  .BoxLink {
+    width: 85%;
+    padding: 0.6rem 0;
+    border-radius: 25px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .BoxIcon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .textLink {
+    width: 68%;
+    gap: 0.15rem;
+  }
+  .textLink > h2 {
+    font-size: 18px;
+  }
+  .pBoxLink {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .direitos {
+    margin: 0.8rem 0 0.4rem;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
